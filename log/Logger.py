@@ -1,16 +1,20 @@
+from datetime import datetime
+
 
 class Logger:
-
     __logfile_name = "tabulations.txt"
-    __header = ["ID","Model", "Hyperparameters", "Features", "Score", "Nota"]
+    __header = ["ID", "Model", "Hyperparameters", "Features", "Score", "Notas"]
 
     @classmethod
-    def log_model(cls, model, hyperparameters, features, score, notes="" ,verbose=True):
+    def log_model(cls, model, hyperparameters, features, score, notes="", verbose=True):
 
-        line = model+","
-        line += "#".join([name+":"+str(value) for name,value in hyperparameters.items()])+","
-        line += "#".join(features)+","
-        line += str(round(score, 4))+"\n"
+        now = datetime.now()
+        line = str(datetime.timestamp(now)) + ","
+        line += model + ","
+        line += "#".join([name + ":" + str(value) for name, value in hyperparameters.items()]) + ","
+        line += "#".join(features) + ","
+        line += str(round(score, 4)) + ","
+        line += notes + "\n"
 
         if verbose:
             print("Writing..")
@@ -24,11 +28,7 @@ class Logger:
             print(f"Score => {score}")
 
         with open(Logger.__logfile_name, "r+") as file:
-
-            idx = 0
-            while file.readline(): idx += 1
-
-            line = str(idx) + ","+ line
+            file.read()
             file.write(line)
 
         print("Model logged successfully")
