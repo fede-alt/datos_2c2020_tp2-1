@@ -13,10 +13,10 @@ En el tp se evalúa la tabulación de resultados, cuando quieren loguear modelos
         ```
         log_model(model, hyperparameters, features, score, verbose=True)
         
-        model: Nombre del modelo
-        hyperparameters: diccionario con la estructura {nombre: valor}
-        features: lista con las columnas que se usaron
-        score: resultado
+        model -> Nombre del modelo
+        hyperparameters ->  diccionario con la estructura {nombre: valor}
+        features -> lista con las columnas que se usaron
+        score -> resultado
     
         ```
 
