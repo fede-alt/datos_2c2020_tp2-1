@@ -2,10 +2,10 @@
 class Logger:
 
     __logfile_name = "tabulations.txt"
-    __header = ["ID","Model", "Hyperparameters", "Features", "Score"]
+    __header = ["ID","Model", "Hyperparameters", "Features", "Score", "Nota"]
 
     @classmethod
-    def log_model(cls, model, hyperparameters, features, score, verbose=True):
+    def log_model(cls, model, hyperparameters, features, score, notes="" ,verbose=True):
 
         line = model+","
         line += "#".join([name+":"+str(value) for name,value in hyperparameters.items()])+","

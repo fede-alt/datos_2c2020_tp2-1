@@ -28,3 +28,12 @@ Notebook donde se preprocesa los datos. Feature engineering.
 
 ## datasets/
 Carpeta donde se deberían exportar los sets de datos de ``Data Preprocessing.ipynb`` y desde donde se importan para los modelos
+
+## IDEAS/TODO:
+
+Feature hashing:
+   * Agregar columna que cuente cuantas entradas hay para cada Opportunity_ID
+   * Agregar columna que cuente el rango en días entre las fechas estimadas de inicio y fin
+   * Tema territorios: Podríamos buscar alguna librería que mapee regiones a coordenadas
+                       y usamos esos valores en 2d en vez de Binary Encoding
+   * asd
