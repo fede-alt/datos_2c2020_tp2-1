@@ -1,0 +1,1 @@
+1613366065.250107,RandomForest,1.5,0.30216,intento1 - set filtrado y features encodeadas,first-rf-model-train.csv,n_estimators:25#max_depth:6#max_features:10#min_samples_split:15#min_samples_leaf:1#random_state:1
